@@ -1,0 +1,461 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Encode Sans', encode sans, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    
+}
+
+
+/*encabezado*/
+
+#encabezado_cv {
+    background-color: white;
+    
+    padding: 20px;
+   
+}
+
+#data {
+    text-align: center;
+    margin-left: 5%;
+        
+}
+
+header {
+    width: 100%;
+    position: static;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 25px;
+    
+}
+
+#nombre {
+    background-color:#2f5597;
+    color: white;
+    font-size: 45px;
+    padding: 5px 25px;
+    border-radius: 25px;
+    margin: 0px;
+
+}
+
+h1 {
+    font-size: medium;
+    
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+    border: 7px solid #2f5597;
+    margin: 2px;
+    margin-left: 10px;
+    
+}
+
+#sobre_mi {
+    
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #2f5597;
+    width:95%;
+
+}
+
+
+#presentacion {
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+} 
+
+/*elementos generales*/
+
+h3 {
+    color: #2f5597;
+    margin: 0;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #2f5597;
+}
+
+button {
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    color: #2f5597;
+    margin: 0px 10px;
+    outline: 0;
+    cursor: pointer;
+}
+
+
+/*boton arriba*/
+
+.boton-a-contenedor {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+    
+    
+}
+
+.boton-a-boton {
+    width: 0px;
+    height: 0px;
+    background: #2f5597;
+    border-radius: 50%;
+    cursor: pointer;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    box-shadow: 1px 1px 6px grey
+
+}
+
+.boton-a-boton i {
+    position: absolute;
+    font-size: 17px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .2s;
+    color: white;
+    transition: .2s;
+
+}
+
+.mostrar_boton {
+    z-index: 10;
+    transition: .2s;
+}
+
+.mostrar_boton .boton-a-boton {
+    animation: popup .3s ease-in-out;
+    width: 40px;
+    height: 40px;
+    z-index: 11;
+
+
+}
+
+.mostrar_boton i {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    50% {
+        width: 60px;
+        height: 60px;
+    }
+    100% {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/*barra*/
+
+nav {
+    clear: both;
+    padding: 15px;
+    color: #2f5597;
+    justify-content: center;
+    text-align: center;
+    background-color: #2f5597;
+}
+
+/*datos formacion*/
+
+main {
+    margin-left: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 60%;
+    min-width: 50px;
+    padding: 30px;
+    float: left;
+    
+    
+}
+
+#estado_estudios {
+    background: white;
+    padding: 25px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0px;
+ }
+
+#finalizado ,
+#en_curso {
+    background-color: #2f5597;
+    padding: 10px 20px;
+    border-radius: none;
+    color: white;
+    margin: 0px 10px;
+
+}
+
+#contenido {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+.items {
+    cursor: pointer;
+    border-bottom: #2f5597 solid 2px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    
+}
+.datos_formacion {
+    overflow: hidden;
+    transition: height .4s;
+    height: 0;
+    
+}
+
+
+
+.cursando,
+.termino {
+    display: none;
+}
+
+.termino_v {
+    display: inline;
+    color: green;
+    font-weight: bold;
+}
+.cursando_v {
+    display: inline;
+    color: rgb(218, 132, 4);
+    font-weight: bold;
+}
+
+/*lateral*/
+aside {
+    padding: 5px;
+    padding-top: 15px;
+    padding-left: 15px;
+    float: left;
+    margin: 15px;
+    width: 20%;
+    border-left: solid #2f5597 5px ;
+
+}
+
+.items2 {
+    border-bottom: #2f5597 solid 2px;
+    padding-bottom: 5px;
+}
+
+iframe {
+    margin-top: 5px;
+}
+
+/*separador*/ 
+#separador {
+    clear: both;
+    max-height: 1px;
+    padding: 2px;
+}
+
+/*experiencia*/
+
+#experiencia_laboral {
+    max-width: 75%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+    
+}
+
+#experiencia_laboral h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/*otros*/ 
+#otros_datos {
+    
+    max-width: 75%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+#otros_datos h3 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#aptitudes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+#aptitudes div {
+    border-left: #2f5597 solid 2px;
+    padding-left: 20px;
+
+}
+
+/*pie - formulario*/ 
+
+footer {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+    clear: both;
+    margin-top: 15px;
+    background-color: #2f5597;
+    color: white;
+}
+
+footer h2 {
+    color: white;
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+}
+
+
+form p input,
+form p textarea,
+form p button {
+    width: 100%;
+    padding: .7em;
+    border: solid 2px #2f5597;
+    outline: 0;
+
+}
+
+#cierre_agra {
+    margin: auto;
+}
+
+.footer_contacto h3 {
+    color: white;
+}
+#info_para_contacto button {
+    background-color: white;
+    border: 0;
+    padding: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+#info_para_contacto {
+    text-align: start;
+}
+/*form*/ 
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.block {
+    grid-column: 1/3;
+}
+.block2 {
+    grid-column: 1/3;
+    display: flex;
+    justify-content:space-evenly;
+    align-content: start;
+    align-items: center;
+    width: 100%;
+    ;
+}
+  
+
+/*responsive*/ 
+
+@media screen and (max-width: 750px) {
+    header {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        align-items: center;
+        margin-bottom: 25px;
+    
+
+    }
+    img {
+        width: 50%;
+        margin-left: 10px;
+    }
+    #nombre {
+        width: 100%;
+    }
+    
+    nav {
+        width: 100%;
+        
+    }
+    
+    nav button {
+        margin-top: 5px;
+    }
+    main {
+        width: 100%;
+        margin: 0;
+    
+
+        
+    }
+    aside {
+        width: 100%;
+        border-left: none;
+        margin: 0px;
+
+    }
+   
+    #sobre_mi h3 {
+        text-align: center;
+    }
+    #aptitudes {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        width: 95%;
+    }
+    
+    .contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: auto;
+    }
+
+    }
